@@ -23,44 +23,44 @@ class House:
         if isinstance(other, House):
             return self.number_of_floors == other.number_of_floors
         else:
-            raise TypeError(f'Expected {type(self).__name__}, got {type(other).__name__} instead')
+            raise TypeError(f'Expected type {type(self).__name__}, got {type(other).__name__} instead')
 
     def __lt__(self, other):
         if isinstance(other, House):
             return self.number_of_floors < other.number_of_floors
         else:
-            raise TypeError(f'Expected {type(self).__name__}, got {type(other).__name__} instead')
+            raise TypeError(f'Expected type {type(self).__name__}, got {type(other).__name__} instead')
 
     def __le__(self, other):
         if isinstance(other, House):
             return self.number_of_floors <= other.number_of_floors
         else:
-            raise TypeError(f'Expected {type(self).__name__}, got {type(other).__name__} instead')
+            raise TypeError(f'Expected type {type(self).__name__}, got {type(other).__name__} instead')
 
     def __gt__(self, other):
         if isinstance(other, House):
             return self.number_of_floors > other.number_of_floors
         else:
-            raise TypeError(f'Expected {type(self).__name__}, got {type(other).__name__} instead')
+            raise TypeError(f'Expected type {type(self).__name__}, got {type(other).__name__} instead')
 
     def __ge__(self, other):
         if isinstance(other, House):
             return self.number_of_floors >= other.number_of_floors
         else:
-            raise TypeError(f'Expected {type(self).__name__}, got {type(other).__name__} instead')
+            raise TypeError(f'Expected type {type(self).__name__}, got {type(other).__name__} instead')
 
     def __ne__(self, other):
         if isinstance(other, House):
             return self.number_of_floors != other.number_of_floors
         else:
-            raise TypeError(f'Expected {type(self).__name__}, got {type(other).__name__} instead')
+            raise TypeError(f'Expected type {type(self).__name__}, got {type(other).__name__} instead')
 
     def __add__(self, value):
         if isinstance(value, int):
             self.number_of_floors += value
             return self
         else:
-            raise TypeError(f'Expected {type(self).__name__}, got {type(value).__name__} instead')
+            raise TypeError(f'Expected type int, got {type(value).__name__} instead')
 
     def __radd__(self, value):
         return self.__add__(value)
@@ -73,21 +73,21 @@ class House:
             self.number_of_floors *= value
             return self
         else:
-            raise TypeError(f'Expected {type(self).__name__}, got {type(value).__name__} instead')
+            raise TypeError(f'Expected type int, got {type(value).__name__} instead')
 
     def __truediv__(self, value):
         if isinstance(value, int):
             self.number_of_floors /= value
             return self
         else:
-            raise TypeError(f'Expected {type(self).__name__}, got {type(value).__name__} instead')
+            raise TypeError(f'Expected type int, got {type(value).__name__} instead')
 
     def __sub__(self, value):
         if isinstance(value, int):
             self.number_of_floors -= value
             return self
         else:
-            raise TypeError(f'Expected {type(self).__name__}, got {type(value).__name__} instead')
+            raise TypeError(f'Expected type int, got {type(value).__name__} instead')
 
 
 h1 = House('ЖК Эльбрус', 10)
